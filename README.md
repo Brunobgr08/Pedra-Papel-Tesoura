@@ -1,4 +1,4 @@
-## Pedra, Papel e Tesoura
+# Pedra, Papel e Tesoura
 
 Homem contra Máquina! Teste suas habilidades de Pedra, Papel e Tesoura contra o computador:
 
@@ -10,6 +10,6 @@ Aplicação desenvolvida em HTML5, CSS3 e Javascript.
 
 Nível de dificuldade: médio.
 
-# Deploy
+## Deploy
 
 <!-- URL: [https://hamburgueria-top.herokuapp.com/](https://hamburgueria-top.herokuapp.com/) -->
