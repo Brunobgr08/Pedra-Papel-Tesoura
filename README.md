@@ -12,4 +12,4 @@ Nível de dificuldade: baixo.
 
 ## Deploy
 
-<!-- URL: [https://brunobgr08.github.io/Pedra-Papel-Tesoura/](https://brunobgr08.github.io/Pedra-Papel-Tesoura/) -->
+URL: [https://brunobgr08.github.io/Pedra-Papel-Tesoura/](https://brunobgr08.github.io/Pedra-Papel-Tesoura/)
