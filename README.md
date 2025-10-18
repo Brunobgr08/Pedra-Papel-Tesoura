@@ -63,8 +63,6 @@ Uma aplicação interativa de Pedra, Papel e Tesoura desenvolvida com tecnologia
 ✅ **Acessibilidade Melhorada** - Melhor contraste e feedback
 ✅ **Código Otimizado** - CSS bem estruturado e eficiente
 
-Para detalhes completos, veja [MELHORIAS.md](./MELHORIAS.md)
-
 ## 🌐 Deploy
 
 **URL**: [https://brunobgr08.github.io/Pedra-Papel-Tesoura/](https://brunobgr08.github.io/Pedra-Papel-Tesoura/)
@@ -141,7 +139,7 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes
 
 ### Bruno Guedes
 
-- GitHub: [@brunobgr08](https://github.com/brunobgr08)
+- GitHub: [@brunobgr08](https://github.com/Brunobgr08)
 
 ## 🤝 Contribuições
 
