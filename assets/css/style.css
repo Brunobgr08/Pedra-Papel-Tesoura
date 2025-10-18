@@ -1,421 +1,614 @@
-@-webkit-keyframes pulse{
+@-webkit-keyframes pulse {
   from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
 
+@keyframes pulse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
-.principal{
-    background-color: #f9b752;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Open Sans Condensed', sans-serif;
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
   }
-  .header{
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.principal {
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #ffffff;
+  min-height: 100vh;
+}
+.header {
+  width: 100%;
+  height: 135px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+  background: linear-gradient(180deg, #1a1a3e 0%, #16213e 100%);
+  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.1);
+  animation: slideInDown 0.6s ease-out;
+}
+.header__img {
+  background-image: url('../img/PedraPapelTesouraTop.gif');
+  background-size: cover;
+  background-position: center;
+  height: 100px;
+  width: 100%;
+  filter: brightness(1.1) contrast(1.1);
+}
+.header__h1 {
+  margin: 0 auto;
+  height: 40px;
+  font-family: 'Otomanopee One', sans-serif;
+  font-size: 1.7em;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00d4ff, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.middleHr {
+  width: 100%;
+}
+.topHR {
+  display: none;
+}
+.main {
+  width: 320px;
+  height: 440px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.boasVindas {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 75%;
+  height: 350px;
+  animation: slideInUp 0.6s ease-out;
+}
+.boasVindas__header {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.boasVindas__h2 {
+  font-weight: 700;
+  background: linear-gradient(90deg, #00d4ff, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.boasVindas__h4 {
+  font-style: italic;
+  color: #b0b0ff;
+}
+.boasVindas__Dados {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.playerName {
+  width: 235px;
+  height: 35px;
+  margin: 20px 0 10px 0;
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid #00d4ff;
+  border-radius: 8px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.playerName:focus {
+  outline: none;
+  background-color: rgba(0, 212, 255, 0.15);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}
+.btnConfirm,
+.btnCancel {
+  width: 70px;
+  height: 30px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 2px solid #00d4ff;
+  background: linear-gradient(135deg, #00d4ff, #7c3aed);
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btnConfirm:hover,
+.btnCancel:hover {
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+  transform: translateY(-2px);
+}
+.btnConfirm {
+  margin-right: 100px;
+}
+.main__game {
+  height: 450px;
+  width: 300px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  animation: slideInUp 0.6s ease-out;
+}
+.divHuman {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.divHuman__header {
+  height: 25px;
+}
+.divHuman__h3 {
+  font-weight: 500;
+}
+.containerImagens {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+.containerImagens__pedra,
+.containerImagens__papel,
+.containerImagens__tesoura {
+  width: 90px;
+  height: 90px;
+  border: solid 2px #00d4ff;
+  border-radius: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 2px;
+  margin-right: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+.containerImagens__pedra:hover,
+.containerImagens__papel:hover,
+.containerImagens__tesoura:hover {
+  background-color: rgba(0, 212, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+  transform: scale(1.05);
+}
+.containerImagens__pedra {
+  background-image: url('../img/pedra.png');
+  background-size: 88px;
+}
+.containerImagens__papel {
+  background-image: url('../img/papel.png');
+  background-size: 80%;
+}
+.containerImagens__tesoura {
+  background-image: url('../img/tesoura.png');
+  background-size: 90%;
+}
+.hiddenImg {
+  display: none;
+}
+.focusImg {
+  background-color: rgba(124, 58, 237, 0.3);
+  border: solid 2px #7c3aed;
+  cursor: not-allowed;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+}
+.divMachine {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 150px;
+}
+.divMachine__header {
+  height: 43px;
+  display: flex;
+  align-items: center;
+}
+.divMachine__h3 {
+  font-weight: 500;
+  display: none;
+}
+.divHuman__h3__pulse {
+  animation: pulse 0.8s infinite alternate;
+}
+.containerImagensMac {
+  width: 90px;
+  height: 90px;
+  display: none;
+  justify-content: center;
+  border: solid 2px #7c3aed;
+  border-radius: 25%;
+  background-color: rgba(124, 58, 237, 0.2);
+  background-image: url('../img/gifPedraPapelTesoura.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+}
+.divResult {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main__winner {
+  width: 300px;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.winner__h3 {
+  height: 30px;
+  font-size: 1em;
+  color: #00d4ff;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+.btnReset {
+  background: linear-gradient(135deg, #00d4ff, #7c3aed);
+  border: solid 2px #00d4ff;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 4px 8px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+  font-weight: 600;
+}
+.btnReset:hover:not(:disabled) {
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.8);
+  transform: translateY(-2px);
+}
+.btnReset:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.main__playerX,
+.main__playerMachine {
+  width: 138px;
+  height: 30px;
+  margin: 5px 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px #00d4ff;
+  color: #ffffff;
+  font-size: 0.9em;
+  background-color: rgba(0, 212, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+.show {
+  display: flex;
+}
+.hidden {
+  display: none;
+}
+.footer {
+  width: 100%;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, var(--color-primary-wood) 0%, #6b3410 100%);
+  color: var(--color-light);
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 3px solid var(--color-primary-gold);
+  margin-top: auto;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Mobile First - Extra Small Devices */
+@media screen and (max-width: 480px) {
+  .main {
     width: 100%;
-    height: 135px;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0px;
+    padding: 0 10px;
+    box-sizing: border-box;
   }
-  .header__img{
-    background-image: url("../img/PedraPapelTesouraTop.gif");
-    background-size: cover;
-    background-position: center;
-    height: 100px;
-    width: 100%;
+  .playerName {
+    width: 90%;
+    max-width: 250px;
   }
-  .header__h1{
-    margin: 0 auto;
+  .btnConfirm {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 200px;
+    margin-bottom: 15px;
+  }
+  .header__img {
+    background-size: 100% 130%;
+    background-position: bottom;
+  }
+  .header__h1 {
     height: 40px;
-    font-family: 'Otomanopee One', sans-serif;
-    font-size: 1.7em;
-    font-weight: 700;
+    font-size: 2.5em;
+    padding: 20px 20px;
   }
-  .middleHr{
+  .middleHr {
+    width: 740px;
+  }
+  .main {
+    width: 750px;
+    height: 450px;
+  }
+  .playerName {
+    margin-right: 200px;
+  }
+  .main__game {
+    height: 450px;
+    width: 740px;
+  }
+  .divHuman {
+    height: 150px;
+  }
+  .divMachine {
+    height: 150px;
+  }
+  .containerImagens {
+    width: 500px;
+  }
+  .divMachine__header {
+    height: 43px;
+  }
+  .containerImagens__pedra,
+  .containerImagens__papel,
+  .containerImagens__tesoura {
+    width: 90px;
+    height: 90px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+  .divResult {
+    justify-content: space-evenly;
+    height: 150px;
+    align-items: flex-end;
+  }
+  .main__winner {
+    width: 740px;
+  }
+  .winner__h3 {
+    font-size: 1.2em;
+    font-weight: 500;
+    height: 27px;
     width: 100%;
-  }
-  .topHR{
-    display: none;
-  }
-  .main{
-    width: 320px; 
-    height: 440px; 
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
   }
-  .boasVindas{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    width: 75%;
-    height: 350px;
+  .main__playerX,
+  .main__playerMachine {
+    width: 250px;
+    height: 45px;
+    font-size: 1.4em;
+    justify-content: space-between;
+    margin: 0 25px;
+    padding: 0;
   }
-  .boasVindas__header{
-    height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  .boasVindas__h2{
-    font-weight: 700;
-  }
-  .boasVindas__h4{
-    font-style: italic;
-  }
-  .boasVindas__Dados{
-    height: 80px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-  }
-  .playerName{
-    width: 235px;
-    height: 35px;
-    margin: 20px 0 10px 0;
-    font-size: 1.2em;
-    font-weight: 600;
-    letter-spacing: 2px;
+  .btnReset {
+    padding: 0 20px;
+    font-size: 1.1em;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
   }
-  .btnConfirm, .btnCancel{
-    width: 70px;
-    height: 30px;
+  .divHuman__h3,
+  .divMachine__h3 {
+    font-size: 1.1em;
+  }
+}
 
-    font-size: 1em;
+@media screen and (min-width: 1024px) {
+  .header {
+    height: 350px;
+    margin-bottom: 15px;
   }
-  .btnConfirm{
-    margin-right: 100px;
+  .header__img {
+    background-size: 100% 130%;
+    background-position: bottom;
+    height: 290px;
   }
-  .main__game{
-    height: 450px;
-    width: 300px;
+  .header__h1 {
+    height: 60px;
+    font-size: 3.4em;
+  }
+  .middleHr {
+    width: 100%;
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
   }
-  .divHuman{
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  .topHR {
+    width: 100%;
   }
-  .divHuman__header{
-    height: 25px;
+  .main {
+    width: 100%;
+    height: auto;
+    min-height: 430px;
+    align-content: flex-start;
+    padding: 20px 0;
   }
-  .divHuman__h3{
-    font-weight: 500;
-  }
-  .containerImagens{
-    width: 300px;
-    display: flex;
-    justify-content: center;
-  }
-  .containerImagens__pedra, .containerImagens__papel, .containerImagens__tesoura{
-    width: 90px;
+  .boasVindas__header {
     height: 90px;
-    border: solid 1.5px #626262;
-    border-radius: 25%;
-    background-repeat: no-repeat;
-    background-position:center;
-    margin-left: 2px;
-    margin-right: 2px;
-    cursor: pointer;
   }
-  .containerImagens__pedra:hover, .containerImagens__papel:hover, .containerImagens__tesoura:hover{
-    background-color: #ffa61f;
+  .boasVindas__h2 {
+    font-weight: 700;
+    font-size: 1.7em;
   }
-  .containerImagens__pedra{
-    background-image: url("../img/pedra.png");
-    background-size:88px;
-    
+  .boasVindas__h4 {
+    font-style: italic;
+    font-size: 1.4em;
   }
-  .containerImagens__papel{
-    background-image: url("../img/papel.png");
-    background-size: 80%;
-    
+  .playerName {
+    width: 350px;
+    margin-right: 50%;
   }
-  .containerImagens__tesoura{
-    background-image: url("../img/tesoura.png");
-    background-size: 90%;
+  .btnConfirm {
+    margin-right: 215px;
   }
-  .hiddenImg{
-    display: none;
-  }
-  .focusImg{
-    background-color: #ffa61f;
-    border: solid 1.8px #383838;
-    cursor: not-allowed;
-  }
-  .divMachine{
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 150px;
-  }
-  .divMachine__header{
-    height: 43px;
-    display: flex;
-    align-items: center;
-  }
-  .divMachine__h3{
-    font-weight: 500;
-    display: none;  
-  }
-  .divHuman__h3__pulse{
-    animation: pulse 0.8s infinite alternate;
-  }
-  .containerImagensMac{
-    width: 90px;
-    height: 90px;
-    display: none;
-    justify-content: center;
-    border: solid 1.8px #383838;
-    border-radius: 25%;
-    background-color: #ffa61f;
-    background-image: url("../img/gifPedraPapelTesoura.gif");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  .divResult{
-    display: flex;
+  .main__game {
+    height: 390px;
+    width: 99.5%;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: center;
   }
-  .main__winner{
-      width: 300px;
-      height: 75px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  .divHuman {
+    height: 240px;
+    width: 50%;
+    justify-content: center;
   }
-  .winner__h3{
-    height: 30px;
-    font-size: 1em;
-  }
-  .btnReset{
-    background-color: #ffa61f;
-    border: solid 1px rgb(73, 73, 73);
-    border-radius: 5px;
-    color: rgb(73, 73, 73);
-    padding: 4px 8px;
-    font-size: 0.9em;
-  }
-  .main__playerX, .main__playerMachine{
-    width: 138px;
-    height: 30px;
-    margin: 5px 2px;
+  .divHuman__header {
+    width: 300px;
+    height: 80px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    border: solid 1px #929292;
-    color: #414141;
-    font-size: 0.9em;
   }
-  .show{
+  .divHuman__h3 {
+    font-size: 1.5em;
+  }
+  .divMachine {
+    height: 240px;
+    width: 50%;
+    justify-content: center;
+  }
+  .divMachine__header {
+    width: 300px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .divMachine__h3 {
+    font-size: 1.5em;
+  }
+  .containerImagens {
+    width: 400px;
+    height: 140px;
+  }
+  .containerImagens__pedra,
+  .containerImagens__papel,
+  .containerImagens__tesoura {
+    width: 120px;
+    height: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .containerImagensMac {
+    width: 120px;
+    height: 120px;
+  }
+  .divResult {
+    height: 150px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+  .main__winner {
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  .winner__h3 {
+    font-size: 1.7em;
+    font-weight: 600;
+    height: 27px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .main__playerX,
+  .main__playerMachine {
+    width: 400px;
+    height: 45px;
+    font-size: 1.4em;
+    justify-content: space-between;
+    margin: 0 25px;
+    padding: 0;
+  }
+  .btnReset {
+    height: 30px;
+    padding: 0 40px;
+    font-size: 1.3em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .showHR {
     display: flex;
   }
-  .hidden{
+  .hiddenHR {
     display: none;
   }
-
-  @media screen and (min-width: 768px){
-    .header{
-      height: 150px;
-      margin-bottom: 15px;
-    } 
-    .header__img{
-      background-size: 100% 130%;
-      background-position:bottom;
-    } 
-    .header__h1{
-      height: 40px; 
-      font-size: 2.2em;
-    }
-    .middleHr{
-      width: 740px;
-    }
-    .main{
-      width: 750px; 
-      height: 420px; 
-    }
-    .playerName{
-      margin-right: 200px;
-    }
-    .main__game{
-      height: 420px;
-      width: 740px;
-    }
-    .containerImagens{
-      width: 500px;
-    }
-    .divMachine__header{
-      height: 43px;
-    }
-    .containerImagens__pedra, .containerImagens__papel, .containerImagens__tesoura{
-      width: 90px;
-      height: 90px;
-      margin-left: 25px;
-      margin-right: 25px;
-    }
-    .divResult{
-      justify-content: space-evenly;
-    }
-    .main__winner{
-      width: 740px;
-    }
-    .winner__h3{
-      font-size: 1.2em;
-    }
-    .main__playerX, .main__playerMachine{
-      width: 250px;
-    }
-    .btnReset{
-      padding: 6px 12px;
-      font-size: 1.1em;
-    }
-
-  }
-  @media screen and (min-width: 1024px){
-    .header{
-      height: 250px;
-      margin-bottom: 5px;
-    } 
-    .header__img{
-      background-size: 100% 130%;
-      background-position:bottom;
-      height: 180px;
-    } 
-    .header__h1{
-      height: 60px; 
-      font-size: 3.4em;
-    }
-    .middleHr{
-      width: 100%;
-      display: none;
-    }
-    .topHR{
-      width: 100%;
-    }
-    .main{    
-      width: 100%; 
-      height: 430px;
-      align-content: flex-start; 
-    }
-    .boasVindas__header{
-      height: 90px;
-    }
-    .boasVindas__h2{
-      font-weight: 700;
-      font-size: 1.7em;
-    }
-    .boasVindas__h4{
-      font-style: italic;
-      font-size: 1.4em;
-    }
-    .playerName{
-      width: 350px;
-      margin-right: 50%;
-    }
-    .btnConfirm{
-      margin-right: 215px;
-    }
-    .main__game{
-      height: 250px;
-      width: 99.5%;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .divHuman{
-      height: 240px;
-      width: 50%;
-      justify-content: center;
-    }
-    .divHuman__header{
-      width: 300px;
-      height: 80px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .divHuman__h3{
-      font-size: 1.5em;
-    }
-    .divMachine{
-      height: 240px;
-      width: 50%;
-      justify-content: center;
-    }
-    .divMachine__header{
-      width: 300px;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .divMachine__h3{
-      font-size: 1.5em;  
-    }
-    .containerImagens{
-      width: 400px;
-      height: 140px;
-    }
-    .containerImagens__pedra, .containerImagens__papel, .containerImagens__tesoura{
-      width: 120px;
-      height: 120px;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-    .containerImagensMac{
-      width: 120px;
-      height: 120px;
-    }
-    .divResult{
-      width: 100%;
-      justify-content: space-evenly;
-    }
-    .main__winner{
-      width: 100%;
-      height: 95px;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    } 
-    .winner__h3{
-      font-size: 1.7em;
-      font-weight: 600;
-      height: 50px;
-    }
-    .main__playerX, .main__playerMachine{
-      width: 400px;
-      height: 55px;
-      font-size: 1.4em;
-      justify-content: space-between;
-      margin: 0 25px;
-      padding: 0;
-    }
-    .btnReset{
-      padding: 10px 40px;
-      font-size: 1.3em;
-    }
-    .showHR{
-      display: flex;
-    }
-    .hiddenHR{
-      display: none;
-    }
-  } 
+}
