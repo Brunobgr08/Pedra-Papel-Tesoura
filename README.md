@@ -57,11 +57,11 @@ Uma aplicação interativa de Pedra, Papel e Tesoura desenvolvida com tecnologia
 
 ## 📋 Melhorias Implementadas (v2.0)
 
-✅ **Cores Modernizadas** - Paleta tecnológica com gradientes
-✅ **Responsividade Aprimorada** - Funciona em todos os tamanhos
-✅ **Animações Adicionadas** - Transições suaves e efeitos visuais
-✅ **Acessibilidade Melhorada** - Melhor contraste e feedback
-✅ **Código Otimizado** - CSS bem estruturado e eficiente
+- ✅ **Cores Modernizadas** - Paleta tecnológica com gradientes
+- ✅ **Responsividade Aprimorada** - Funciona em todos os tamanhos
+- ✅ **Animações Adicionadas** - Transições suaves e efeitos visuais
+- ✅ **Acessibilidade Melhorada** - Melhor contraste e feedback
+- ✅ **Código Otimizado** - CSS bem estruturado e eficiente
 
 ## 🌐 Deploy
 
